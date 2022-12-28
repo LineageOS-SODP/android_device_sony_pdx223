@@ -12,11 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_xqct54.mk \
-                     $(LOCAL_DIR)/lineage_pdx223.mk
+# Inherit device parts
+$(call inherit-product, device/sony/pdx223/aosp_xqct54.mk)
 
-COMMON_LUNCH_CHOICES += \
-    aosp_xqct54-eng \
-    aosp_xqct54-userdebug \
-    lineage_pdx223-eng \
-    lineage_pdx223-userdebug
+# Override Product Name
+PRODUCT_NAME := lineage_pdx223
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := pdx223
+
+TARGET_SCREEN_HEIGHT := 3840
+TARGET_SCREEN_WIDTH := 1644
+TARGET_BOOT_ANIMATION_RES := 1440
