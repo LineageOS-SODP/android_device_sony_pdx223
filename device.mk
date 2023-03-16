@@ -68,7 +68,6 @@ PRODUCT_PACKAGES += \
 
 # Telephony Packages (AOSP)
 PRODUCT_PACKAGES += \
-    InCallUI \
     Stk
 
 # SAR
